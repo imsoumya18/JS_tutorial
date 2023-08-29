@@ -1,7 +1,6 @@
-const prompt = require("prompt-sync")();
+let nums = [15, 43, 3, 22, 17];
 
-let a = prompt("Enter a number ");
-a = parseInt(a);
-
-if (a % 2 == 0) console.log("Even");
-else console.log("Odd");
+console.log(nums);
+console.log(typeof nums[0]);
+nums.sort();
+console.log(nums);
