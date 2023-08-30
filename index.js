@@ -1,6 +1,20 @@
-let nums = [15, 43, 3, 22, 17];
+const prompt = require("prompt-sync")();
 
-console.log(nums);
-console.log(typeof nums[0]);
-nums.sort();
-console.log(nums);
+let num = Math.floor(Math.random() * 10);
+let guess = -1;
+let cnt = 1;
+
+while (guess != num) {
+  guess = prompt("Enter a number: ");
+
+  if (guess > num) {
+    console.log("Greater");
+  } else if (guess < num) {
+    console.log("Smaller");
+  } else {
+    console.log("You got it!!");
+    console.log("Your point = ", -cnt);
+  }
+
+  cnt++;
+}
